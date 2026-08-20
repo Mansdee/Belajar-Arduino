@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "author": "mans",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 228.4, "left": 76.8, "attrs": {} },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": -160, "left": 116, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:9", "servo1:PWM", "orange", [ "v-37.8", "h-105.4", "v-38.4" ] ],
+    [ "servo1:V+", "uno:5V", "red", [ "h-9.6", "v-76.7", "h96" ] ],
+    [ "servo1:GND", "uno:GND.2", "black", [ "h0", "v-57.6", "h86.4" ] ],
+    [ "ldr1:GND", "uno:GND.1", "black", [ "h9.6", "v124.4", "h-182.4" ] ],
+    [ "ldr1:VCC", "uno:5V", "red", [ "h19.2", "v355.2", "h-144" ] ],
+    [ "uno:A0", "ldr1:AO", "green", [ "v29.3", "h80" ] ]
+  ],
+  "dependencies": {}
+}
